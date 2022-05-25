@@ -1,0 +1,438 @@
+
+.animation-btn::before{
+    content: "";
+    height: 90px;
+    width: 90px;
+    position: absolute;
+    top: 50px;
+    left: 400px;
+    background-color: #e73a3e;
+    border-radius: 50%;
+    animation: playbtn 1.6s ease-out infinite;
+}
+
+@keyframes playbtn{
+    0%,30%{
+        transform: scale(0);
+        opacity: 1;
+    }
+    50%{
+        transform: scale(1.5);
+        opacity: .7;
+    }
+    100%{
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+.animation-btn2::before{
+    content: "";
+    height: 90px;
+    width: 90px;
+    position: absolute;
+    top: 50px;
+    left: 600px;
+    background-color: blue;
+    border-radius: 50%;
+    animation: playbtn2 1.6s ease-out infinite;
+    animation-delay: 1s;
+}
+@keyframes playbtn2{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    30%{
+        transform: scale(1);
+        opacity: 1;
+    }
+    50%{
+        transform: scale(1.5);
+        opacity: .7;
+    }
+    100%{
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+.animation-btn3::before{
+    content: "";
+    height: 90px;
+    width: 90px;
+    position: absolute;
+    top: 50px;
+    left: 800px;
+    background-color: blueviolet;
+    border-radius: 50%;
+    animation: playbtn3 1.6s ease-out infinite;
+    animation-delay: 2s;
+}
+@keyframes playbtn3{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    30%{
+        transform: scale(1);
+        opacity: 1;
+    }
+    50%{
+        transform: scale(1.5);
+        opacity: .7;
+    }
+    100%{
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+.animation-btn4::before{
+    content: "";
+    height: 90px;
+    width: 90px;
+    position: absolute;
+    top: 50px;
+    left: 1000px;
+    background-color: yellowgreen;
+    border-radius: 50%;
+    animation: playbtn4 1.6s ease-out infinite;
+    animation-delay: 3s;
+}
+@keyframes playbtn4{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    30%{
+        transform: scale(1);
+        opacity: 1;
+    }
+    50%{
+        transform: scale(1.5);
+        opacity: .7;
+    }
+    100%{
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+.animation-btn5::before{
+    content: "";
+    height: 90px;
+    width: 90px;
+    position: absolute;
+    top: 50px;
+    left: 1200px;
+    background-color: yellow;
+    border-radius: 50%;
+    animation: playbtn5 1.6s ease-out infinite;
+    animation-delay: 4s;
+}
+@keyframes playbtn5{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    30%{
+        transform: scale(1);
+        opacity: 1;
+    }
+    50%{
+        transform: scale(1.5);
+        opacity: .7;
+    }
+    100%{
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+/* Chain Effects */
+.chain-effect { 
+	animation-name: chain; 				
+	animation-duration: 10s;        			
+	animation-iteration-count:infinite;  
+	position:absolute;
+    top: 200px;
+    height: 100px;
+    width: 100px;	
+} 
+@keyframes chain { 
+	0% {opacity: 0; background: #fff; left:0;}
+	25% {opacity: 1; background:#000;} 
+	50% {transform:rotate(0.5turn); left:80%; background:#ff0;} 
+	75% {opacity: 1; background:#000;}
+	100% {opacity: 0; background:#fff; left:0; transform:rotate(0); }
+}
+.chain-effect2 { 
+    animation-name: chain2; 				
+    animation-duration: 10s;        			
+    animation-iteration-count:infinite;  
+    animation-direction: alternate;
+    position:absolute;
+    top: 350px;
+    height: 100px;
+    width: 100px;	
+} 
+@keyframes chain2 { 
+	0% {opacity: 0; background: #fff; left:0;}
+	25% {opacity: 1; background:#000;} 
+	50% {transform:rotate(0.5turn); left:80%; background:#ff0;} 
+	75% {opacity: 1; background:#000;}
+	100% {opacity: 0; background:#fff; left:0; transform:rotate(0); }
+}
+/* Circle Animation */
+.circle-animation {
+    margin-top: 200px;
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container {
+    background: red;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transform-origin: center;
+    animation: rotate 2s ease forwards infinite;
+  }
+  
+  .circle {
+    background: red;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: relative;
+  }
+  
+  .circle:nth-child(1) {
+    left: -100px;
+    animation: slideleft 2s ease forwards infinite;
+  }
+  
+  .circle:nth-child(2) {
+    left: 100px;
+    top: -40px;
+    animation: slideright 2s ease forwards infinite;
+  }
+  
+  @keyframes rotate {
+    0% {
+      background: #00e5ff;
+      transform: rotate(0deg);
+    }
+    25% {
+      background: #aa00ff;
+    }
+    50% {
+      background: #0761ff;
+      transform: rotate(0deg);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+      background: #00e5ff;
+    }
+  }
+  
+  @keyframes slideleft {
+    0% {
+      background: #00e5ff;
+      transform: translatex(0px);
+    }
+    25% {
+      background: #aa00ff;
+      transform: translatex(-100px);
+    }
+    50% {
+      background: #0761ff;
+      transform: translatex(0px);
+    }
+    100% {
+      background: #00e5ff;
+    }
+  }
+  
+  @keyframes slideright {
+    0% {
+      background: #00e5ff;
+      transform: translatex(0px);
+    }
+    25% {
+      background: #aa00ff;
+      transform: translatex(100px);
+    }
+    50% {
+      background: #0761ff;
+      transform: translatex(0px);
+    }
+    100% {
+      background: #00e5ff;
+    }
+  }
+  
+/* Submit Button */
+
+@-webkit-keyframes extend {
+    0% {
+        width: 600px;
+        height: 200px;
+        border-radius: 100px;
+        } 10% {
+        width: 610px;
+        height: 210px;
+        background: #fff;
+        margin-left: - 5px;
+        margin-top: - 5px;
+        } 20% {
+        width: 600px;
+        height: 200px;
+        background: #6fb07f;
+        margin-left: 0px;
+        margin-top: 0px;
+        } 100% {
+        width: 200px;
+        height: 200px;
+        border-radius: 100px;
+        margin-left: 190px;
+        background: #6fb07f;
+        }
+    }
+@keyframes extend {
+    0% {
+        width: 600px;
+        height: 200px;
+        border-radius: 100px;
+        } 10% {
+        width: 610px;
+        height: 210px;
+        background: #fff;
+        margin-left: - 5px;
+        margin-top: - 5px;
+        } 20% {
+        width: 600px;
+        height: 200px;
+        background: #6fb07f;
+        margin-left: 0px;
+        margin-top: 0px;
+        } 100% {
+        width: 200px;
+        height: 200px;
+        border-radius: 100px;
+        margin-left: 190px;
+        background: #6fb07f;
+        }
+    }
+
+@-webkit-keyframes disappear {
+    0% {
+        opacity: 1;
+        } 20% {
+        color: #fff;
+        } 100% {
+        opacity: 0;
+        }
+    }
+@keyframes disappear {
+    0% {
+        opacity: 1;
+        } 20% {
+        color: #fff;
+        } 100% {
+        opacity: 0;
+        }
+    }
+
+@-webkit-keyframes appear {
+    0% {
+        opacity: 0;
+        } 70% {
+        opacity: 0;
+        } 100% {
+        opacity: 1;
+        }
+    }
+@keyframes appear {
+    0% {
+        opacity: 0;
+        } 70% {
+        opacity: 0;
+        } 100% {
+        opacity: 1;
+        }
+    }
+html {
+    background: #fff
+    }
+
+input, button, submit {
+    border: none
+    }
+
+.cont {
+    position: absolute;
+    width: 610px;
+    height: 10px;
+    left: 50%;
+    top: 100%;
+    margin: -100px 0 0 -300px
+    }
+
+button {
+    border-width: 1px;
+    width: 600px;
+    height: 200px;
+    /*border-radius*/
+    border-radius: 100px;
+    background: #fff;
+    position: absolute;
+    border: 5px solid #6fb07f
+    }
+
+button > span {
+    font-size: 48px;
+    color: #6fb07f
+    }
+
+img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    opacity: 0
+    }
+
+button:focus {
+    /*animation*/
+    -webkit-animation: extend 1s ease-in-out;
+    -ms-animation: extend 1s ease-in-out;
+    animation: extend 1s ease-in-out;
+    -webkit-animation-fill-mode: forwards;
+    /* Chrome, Safari, Opera */
+    animation-fill-mode: forwards
+    }
+
+button:focus > span {
+    /*animation*/
+    -webkit-animation: disappear 1s ease-in-out;
+    -ms-animation: disappear 1s ease-in-out;
+    animation: disappear 1s ease-in-out;
+    -webkit-animation-fill-mode: forwards;
+    /* Chrome, Safari, Opera */
+    animation-fill-mode: forwards
+    }
+
+button:focus > img {
+    /*animation*/
+    -webkit-animation: appear 1s ease-in-out;
+    -ms-animation: appear 1s ease-in-out;
+    animation: appear 1s ease-in-out;
+    -webkit-animation-fill-mode: forwards;
+    /* Chrome, Safari, Opera */
+    animation-fill-mode: forwards
+    }
